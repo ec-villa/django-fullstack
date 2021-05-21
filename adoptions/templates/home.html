@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block metaDescription %}Home is where the life is appreciated{% endblock %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% include 'components/header.html' %}
+    {% include 'components/dateTime.html' %}
+
+    <ul>
+        {% for exampleData in exampleDatas %}
+        <li>
+            {{ exampleData.name|capfirst }}
+        </li>
+        {% endfor %}
+    </ul>
+    
+    {% include 'components/dataPetTable.html' %}
+    
+    <ul>
+        {% for pet in pets %}
+        <li>
+            <a href="{% url 'pet_detail' pet.id %}">
+                {{ pet.name|capfirst }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

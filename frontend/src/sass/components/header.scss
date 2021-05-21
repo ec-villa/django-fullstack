@@ -1,0 +1,13 @@
+
+header {
+    h2 {
+        &.headline {
+            color: $main-txt-color;  
+        }    
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        padding: $spacing * 2  0;
+    }
+}

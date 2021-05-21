@@ -1,0 +1,14 @@
+{% load render_bundle from webpack_loader%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% include 'core/meta.html' %}
+    <meta name="description" content="{% block metaDescription %}{% endblock %}" />
+    {% include 'core/styles.html' %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+    {% include 'core/scripts.html' %}
+</body>
+</html>
