@@ -3,7 +3,10 @@ node_modules
 .vscode
 .sass-cache
 frontend/node_modules
+frontend/webpack-stats.json
+frontend/package-lock.json
 .DS_Store
 static
-frontend/webpack-stats.json
-package-lock.json
+testdjango/__pycache__/
+adoptions/migrations/__pycache__/
+adoptions/__pycache__/
