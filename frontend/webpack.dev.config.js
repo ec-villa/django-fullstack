@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const MiniCssExractPlugin = require('mini-css-extract-plugin');
 const BundleTracker = require('webpack-bundle-tracker');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: './src/js/index.js',
@@ -37,10 +38,24 @@ module.exports = {
                     'postcss-loader', 
                     'sass-loader', 
                 ]
-            }
+            },
+            {
+                test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                use: {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[path][name].[ext]',
+                  },
+                },
+            },
         ]
     },
     plugins: [
+        new CopyWebpackPlugin({ 
+            patterns: [{ 
+                from: path.resolve(__dirname, './src/images'), to: '../images'
+            }] 
+        }),
         new MiniCssExractPlugin({
             filename: '../css/styles.bundle.css',
         }),
@@ -52,8 +67,9 @@ module.exports = {
     ],
     devServer: {
         port: 3000,
-        hotOnly: true,
-        writeToDisk: true,
+        compress: true,
+        liveReload: true,
+        allowedHosts: 'auto',
         headers: {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',

@@ -1,1 +1,27 @@
-{"status":"done","chunks":{"main":["../css/styles.bundle.css","scripts.bundle.js","main.d8507a23c79416e122ab.hot-update.js"]},"assets":{"../css/styles.bundle.css":{"name":"../css/styles.bundle.css"},"scripts.bundle.js":{"name":"scripts.bundle.js"},"main.d8507a23c79416e122ab.hot-update.js":{"name":"main.d8507a23c79416e122ab.hot-update.js"},"main.d8507a23c79416e122ab.hot-update.json":{"name":"main.d8507a23c79416e122ab.hot-update.json"}}}
+{
+  "status": "done",
+  "assets": {
+    "../css/styles.bundle.css": {
+      "name": "../css/styles.bundle.css",
+      "path": "/Users/henryvila/funwork/django/django-fullstack/static/css/styles.bundle.css"
+    },
+    "scripts.bundle.js": {
+      "name": "scripts.bundle.js",
+      "path": "/Users/henryvila/funwork/django/django-fullstack/static/js/scripts.bundle.js"
+    },
+    "../images/favicon.ico": {
+      "name": "../images/favicon.ico",
+      "path": "/Users/henryvila/funwork/django/django-fullstack/static/images/favicon.ico"
+    },
+    "../images/logo.png": {
+      "name": "../images/logo.png",
+      "path": "/Users/henryvila/funwork/django/django-fullstack/static/images/logo.png"
+    }
+  },
+  "chunks": {
+    "main": [
+      "../css/styles.bundle.css",
+      "scripts.bundle.js"
+    ]
+  }
+}
